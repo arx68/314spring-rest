@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: web.SpringbootApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 32.401 s <<< FAILURE! - in web.SpringbootApplicationTests
+contextLoads  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testData': Invocation of init method failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [roles.UK_jdhyvh8di85ai37phukfemdnx]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+Caused by: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [roles.UK_jdhyvh8di85ai37phukfemdnx]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'ROLE_ADMIN' for key 'roles.UK_jdhyvh8di85ai37phukfemdnx'
+
