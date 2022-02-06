@@ -133,18 +133,6 @@ function strRoles(rls) {
     return ret;
 }
 
-// function jsonRoles(sel){
-//     let roles = [{}, {}];
-//     let formS = document.getElementById(sel)
-//     for (let n = 0; n < formS.length; n++) {
-//         if (formS.options[n].selected) {
-//             roles[n]['id'] = formS.options[n].id;
-//             roles[n]['rolename'] = formS.options[n].value;
-//         }
-//     }
-//     return roles;
-// }
-
 function arrRoles(sel) {
     let roles = [];
     let formS = document.getElementById(sel)
@@ -182,8 +170,7 @@ $(document).on('submit', '#userFormAdd', function (e) {
     });
 });
 
-//-------------EDIT-UPDATE----------------
-
+//-------------EDIT-UPDATE---------------
 function openEditModal(id) {
     let row = document.getElementById('user-' + id);
     let tds = row.getElementsByTagName("td");
@@ -231,7 +218,6 @@ $(document).on('submit', '#userFormEdit', function (e) {
 
 //-------------DELETE-----------------
 let userIdToDel = null;
-
 function openDeleteModal(id) {
     userIdToDel = id;
     let row = document.getElementById('user-' + id);
